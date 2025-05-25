@@ -9,15 +9,15 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Image
                 src="/reef-and-rocks-logo.png"
                 alt="Reef and Rocks"
-                width={120}
-                height={60}
-                className="h-12 w-auto"
+                width={180}
+                height={90}
+                className="h-16 md:h-18 w-auto"
               />
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -75,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-background">
+      <section id="about" className="py-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* Product Showcase */}
-      <section id="collection" className="py-20 bg-muted/30">
+      <section id="collection" className="py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-4">Featured Collection</Badge>
@@ -211,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-background">
+      <section id="contact" className="pt-32 pb-48 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
