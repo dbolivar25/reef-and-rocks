@@ -2,7 +2,15 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ShoppingBag, Mail, MapPin, Instagram, ArrowRight, Sparkles, Heart } from "lucide-react";
+import {
+  ShoppingBag,
+  Mail,
+  MapPin,
+  Instagram,
+  ArrowRight,
+  Sparkles,
+  Heart,
+} from "lucide-react";
 
 export default function Home() {
   return (
@@ -21,10 +29,29 @@ export default function Home() {
               />
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
-              <a href="#collection" className="text-sm font-medium hover:text-primary transition-colors">Collection</a>
-              <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
-              <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <a
+                href="#about"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="#collection"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                Collection
+              </a>
+              <a
+                href="#contact"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                Contact
+              </a>
+              <Button
+                variant="outline"
+                size="sm"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              >
                 <Instagram className="h-4 w-4 mr-2" />
                 Follow Us
               </Button>
@@ -37,7 +64,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-muted via-background to-accent/20" />
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]" />
-        
+
         <div className="relative container mx-auto px-4 pt-24 pb-48 md:pt-32 md:pb-64">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-secondary/50 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
@@ -66,10 +93,17 @@ export default function Home() {
 
         {/* Decorative wave */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V120Z" 
-              fill="currentColor" 
-              className="text-background" />
+          <svg
+            viewBox="0 0 1440 120"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-auto"
+          >
+            <path
+              d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V120Z"
+              fill="currentColor"
+              className="text-background"
+            />
           </svg>
         </div>
       </section>
@@ -79,25 +113,35 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge variant="outline" className="mb-4">Our Story</Badge>
-              <h2 className="text-4xl font-bold mb-6">Where Ocean Meets Artistry</h2>
+              <Badge variant="outline" className="mb-4">
+                Our Story
+              </Badge>
+              <h2 className="text-4xl font-bold mb-6">
+                Where Ocean Meets Artistry
+              </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Reef & Rocks Jewelry Boutique was born from a deep love for the ocean and its endless treasures. 
-                Each piece in our collection is carefully handcrafted using stones and shells personally selected 
-                from beaches around the world.
+                Reef & Rocks Jewelry Boutique was born from a deep love for the
+                ocean and its endless treasures. Each piece in our collection is
+                carefully handcrafted using stones and shells personally
+                selected from beaches around the world.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                We believe that jewelry should tell a story – your story. Every stone we wrap, every shell we 
-                polish carries with it the whispers of waves and the warmth of sun-soaked shores.
+                We believe that jewelry should tell a story – your story. Every
+                stone we wrap, every shell we polish carries with it the
+                whispers of waves and the warmth of sun-soaked shores.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-secondary/30 p-4 rounded-lg">
                   <h4 className="font-semibold mb-1">100% Handmade</h4>
-                  <p className="text-sm text-muted-foreground">Every piece crafted with care</p>
+                  <p className="text-sm text-muted-foreground">
+                    Every piece crafted with care
+                  </p>
                 </div>
                 <div className="bg-secondary/30 p-4 rounded-lg">
                   <h4 className="font-semibold mb-1">Natural Materials</h4>
-                  <p className="text-sm text-muted-foreground">Authentic stones & shells</p>
+                  <p className="text-sm text-muted-foreground">
+                    Authentic stones & shells
+                  </p>
                 </div>
               </div>
             </div>
@@ -109,7 +153,9 @@ export default function Home() {
               </div>
               <div className="absolute -bottom-6 -right-6 bg-accent/80 backdrop-blur-sm p-6 rounded-xl shadow-lg">
                 <p className="font-semibold">Sustainable & Ethical</p>
-                <p className="text-sm text-muted-foreground">Responsibly sourced materials</p>
+                <p className="text-sm text-muted-foreground">
+                  Responsibly sourced materials
+                </p>
               </div>
             </div>
           </div>
@@ -120,10 +166,15 @@ export default function Home() {
       <section id="collection" className="py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge variant="outline" className="mb-4">Featured Collection</Badge>
-            <h2 className="text-4xl font-bold mb-4">Nature&apos;s Finest Treasures</h2>
+            <Badge variant="outline" className="mb-4">
+              Featured Collection
+            </Badge>
+            <h2 className="text-4xl font-bold mb-4">
+              Nature&apos;s Finest Treasures
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Each piece is one-of-a-kind, just like the natural elements that inspire them
+              Each piece is one-of-a-kind, just like the natural elements that
+              inspire them
             </p>
           </div>
 
@@ -138,7 +189,9 @@ export default function Home() {
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">Ocean Stone Pendants</h3>
+                  <h3 className="font-semibold text-lg mb-2">
+                    Ocean Stone Pendants
+                  </h3>
                   <p className="text-muted-foreground text-sm mb-4">
                     Wire-wrapped beach stones with natural patterns and textures
                   </p>
@@ -162,7 +215,9 @@ export default function Home() {
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">Shell Drop Earrings</h3>
+                  <h3 className="font-semibold text-lg mb-2">
+                    Shell Drop Earrings
+                  </h3>
                   <p className="text-muted-foreground text-sm mb-4">
                     Delicate shells paired with natural fibers and beads
                   </p>
@@ -186,7 +241,9 @@ export default function Home() {
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">Beach Glass Rings</h3>
+                  <h3 className="font-semibold text-lg mb-2">
+                    Beach Glass Rings
+                  </h3>
                   <p className="text-muted-foreground text-sm mb-4">
                     Smooth sea glass wrapped in sterling silver wire
                   </p>
@@ -215,8 +272,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4">Get in Touch</Badge>
-              <h2 className="text-4xl font-bold mb-4">Let&apos;s Create Something Beautiful</h2>
+              <Badge variant="outline" className="mb-4">
+                Get in Touch
+              </Badge>
+              <h2 className="text-4xl font-bold mb-4">
+                Let&apos;s Create Something Beautiful
+              </h2>
               <p className="text-muted-foreground">
                 Have a custom request or want to know more about our collection?
               </p>
@@ -229,7 +290,10 @@ export default function Home() {
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-semibold mb-2">Email Us</h3>
-                  <a href="mailto:reefandrockjewelry@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href="mailto:reefandrockjewelry@gmail.com"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
                     reefandrockjewelry@gmail.com
                   </a>
                 </CardContent>
@@ -241,7 +305,10 @@ export default function Home() {
                     <Instagram className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-semibold mb-2">Follow Us</h3>
-                  <a href="https://instagram.com/reef.and.rocks.jewelry" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a
+                    href="https://instagram.com/reef.and.rocks.jewelry"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
                     @reef.and.rocks.jewelry
                   </a>
                 </CardContent>
@@ -261,7 +328,9 @@ export default function Home() {
             </div>
 
             <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl p-8 mt-12 text-center">
-              <h3 className="text-2xl font-bold mb-4">Join Our Reef & Rocks Family</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                Join Our Reef & Rocks Family
+              </h3>
               <p className="text-muted-foreground mb-6">
                 Get exclusive access to new collections and special offers
               </p>
@@ -286,10 +355,12 @@ export default function Home() {
                 height={40}
                 className="h-8 w-auto"
               />
-              <span className="text-sm text-muted-foreground">© 2024 Reef & Rocks Jewelry</span>
+              <span className="text-sm text-muted-foreground">
+                © 2024 Reef & Rocks Jewelry
+              </span>
             </div>
             <p className="text-sm text-muted-foreground italic">
-              🌿 Jewelry crafted by nature, uniquely picked stones & shells 🐚
+              Jewelry crafted by nature, uniquely picked stones & shells 🐚
             </p>
           </div>
         </div>
@@ -297,3 +368,4 @@ export default function Home() {
     </div>
   );
 }
+
