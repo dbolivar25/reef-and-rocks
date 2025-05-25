@@ -38,7 +38,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-muted via-background to-accent/20" />
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]" />
         
-        <div className="relative container mx-auto px-4 py-24 md:py-32">
+        <div className="relative container mx-auto px-4 pt-24 pb-48 md:pt-32 md:pb-64">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-secondary/50 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
               <Sparkles className="h-4 w-4 text-primary" />
