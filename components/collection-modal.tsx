@@ -124,7 +124,7 @@ export function CollectionModal() {
 
   return (
     <Dialog open={isOpen} onOpenChange={closeModal}>
-      <DialogContent className="!max-w-none w-[90vw] h-[90vh] p-0 overflow-hidden">
+      <DialogContent className="!max-w-none w-[90vw] h-[90vh] p-0 overflow-hidden flex flex-col">
         <DialogTitle className="sr-only">Our Collection</DialogTitle>
         <DialogDescription className="sr-only">
           Browse our handcrafted jewelry collection
