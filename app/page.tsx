@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Navigation } from "@/components/navigation";
 import {
   ShoppingBag,
   Mail,
@@ -10,60 +11,12 @@ import {
   ArrowRight,
   Sparkles,
   Heart,
-  Menu,
 } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b">
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Image
-                src="/reef-and-rocks-logo.png"
-                alt="Reef and Rocks"
-                width={180}
-                height={90}
-                className="h-16 md:h-18 w-auto"
-              />
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a
-                href="#about"
-                className="text-sm font-medium hover:text-primary transition-colors"
-              >
-                About
-              </a>
-              <a
-                href="#collection"
-                className="text-sm font-medium hover:text-primary transition-colors"
-              >
-                Collection
-              </a>
-              <a
-                href="#contact"
-                className="text-sm font-medium hover:text-primary transition-colors"
-              >
-                Contact
-              </a>
-              <Button
-                variant="outline"
-                size="sm"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              >
-                <Instagram className="h-4 w-4 mr-2" />
-                Follow Us
-              </Button>
-            </div>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Open menu</span>
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -361,7 +314,7 @@ export default function Home() {
                 className="h-8 w-auto"
               />
               <span className="text-sm text-muted-foreground">
-                © 2024 Reef & Rocks Jewelry
+                © 2025 Reef & Rocks Jewelry
               </span>
             </div>
             <p className="text-sm text-muted-foreground italic">
@@ -373,4 +326,3 @@ export default function Home() {
     </div>
   );
 }
-
