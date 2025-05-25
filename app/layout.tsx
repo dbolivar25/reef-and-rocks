@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Reef & Rocks Jewelry",
     images: [
       {
-        url: "/reef-and-rocks-logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Reef & Rocks Jewelry - Handcrafted Ocean-Inspired Jewelry",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Reef & Rocks Jewelry | Handcrafted Ocean-Inspired Jewelry",
     description: "Uniquely picked stones & shells transformed into wearable art. Each piece tells a story of the ocean's treasures.",
-    images: ["/reef-and-rocks-logo.png"],
+    images: ["/og-image.png"],
     creator: "@reefandrocks",
   },
   icons: {
