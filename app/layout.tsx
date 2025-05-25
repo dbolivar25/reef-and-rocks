@@ -15,6 +15,84 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Reef & Rocks Jewelry | Handcrafted Ocean-Inspired Jewelry",
   description: "Uniquely picked stones & shells transformed into wearable art. Handcrafted jewelry inspired by nature and the ocean's treasures.",
+  keywords: ["handmade jewelry", "ocean jewelry", "beach jewelry", "natural stone jewelry", "shell jewelry", "wire wrapped jewelry", "artisan jewelry", "sustainable jewelry", "custom jewelry", "reef and rocks"],
+  authors: [{ name: "Reef & Rocks Jewelry" }],
+  creator: "Reef & Rocks Jewelry",
+  publisher: "Reef & Rocks Jewelry",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://reef-and-rocks.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Reef & Rocks Jewelry | Handcrafted Ocean-Inspired Jewelry",
+    description: "Uniquely picked stones & shells transformed into wearable art. Handcrafted jewelry inspired by nature and the ocean's treasures.",
+    url: "https://reef-and-rocks.vercel.app",
+    siteName: "Reef & Rocks Jewelry",
+    images: [
+      {
+        url: "/reef-and-rocks-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Reef & Rocks Jewelry - Handcrafted Ocean-Inspired Jewelry",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reef & Rocks Jewelry | Handcrafted Ocean-Inspired Jewelry",
+    description: "Uniquely picked stones & shells transformed into wearable art. Each piece tells a story of the ocean's treasures.",
+    images: ["/reef-and-rocks-logo.png"],
+    creator: "@reefandrocks",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "android-chrome-192x192",
+        url: "/android-chrome-192x192.png",
+      },
+      {
+        rel: "android-chrome-512x512",
+        url: "/android-chrome-512x512.png",
+      },
+    ],
+  },
+  manifest: "/site.webmanifest",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f9fafb" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
+  ],
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "jewelry",
 };
 
 export default function RootLayout({

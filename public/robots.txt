@@ -1,0 +1,9 @@
+# Robots.txt for Reef & Rocks Jewelry
+# https://reefandrocks.com
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://reefandrocks.com/sitemap.xml
