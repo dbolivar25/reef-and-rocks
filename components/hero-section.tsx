@@ -1,11 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Heart } from "lucide-react";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-muted via-background to-accent/20" />
-      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]" />
+      {/* Custom watercolor background */}
+      <div className="absolute inset-0">
+        <Image
+          src="/hero-watercolor.png"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+        />
+      </div>
+      <div className="absolute inset-0 bg-background/30" />
 
       <div className="relative container mx-auto px-4 pt-24 pb-48 md:pt-32 md:pb-64">
         <div className="text-center max-w-3xl mx-auto">
@@ -16,7 +26,7 @@ export function HeroSection() {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-foreground to-primary bg-clip-text text-transparent">
             Jewelry Crafted by Nature
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+          <p className="text-xl text-foreground/80 mb-8 leading-relaxed">
             Uniquely picked stones & shells transformed into wearable art.
             Each piece tells a story of the ocean&apos;s treasures.
           </p>
