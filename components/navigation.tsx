@@ -19,7 +19,7 @@ export function Navigation() {
                 alt="Reef and Rocks"
                 width={180}
                 height={90}
-                className="h-16 md:h-18 w-auto"
+                className="h-16 md:h-18 w-auto hover:drop-shadow-[0_0_8px_rgba(8,145,178,0.1)] transition-all"
               />
             </a>
           </div>
