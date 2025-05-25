@@ -13,13 +13,15 @@ export function Navigation() {
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Image
-              src="/reef-and-rocks-logo.png"
-              alt="Reef and Rocks"
-              width={180}
-              height={90}
-              className="h-16 md:h-18 w-auto"
-            />
+            <a href="#" className="block">
+              <Image
+                src="/reef-and-rocks-logo.png"
+                alt="Reef and Rocks"
+                width={180}
+                height={90}
+                className="h-16 md:h-18 w-auto"
+              />
+            </a>
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a
