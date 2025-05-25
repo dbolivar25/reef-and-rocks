@@ -1,7 +1,10 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingBag, ArrowRight } from "lucide-react";
+import { useCollectionModal } from "@/lib/collection-context";
 
 interface Product {
   id: number;
@@ -44,6 +47,8 @@ const products: Product[] = [
 ];
 
 export function ProductShowcase() {
+  const { openModal } = useCollectionModal();
+
   return (
     <section id="collection" className="py-32 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -79,7 +84,7 @@ export function ProductShowcase() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold">{product.priceRange}</span>
-                    <Button size="sm" variant="outline">
+                    <Button size="sm" variant="outline" onClick={openModal}>
                       <ShoppingBag className="h-4 w-4" />
                     </Button>
                   </div>
@@ -90,7 +95,7 @@ export function ProductShowcase() {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline">
+          <Button size="lg" variant="outline" onClick={openModal}>
             View Full Collection
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

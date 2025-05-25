@@ -1,9 +1,14 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, MapPin, Instagram, Sparkles } from "lucide-react";
+import { useCollectionModal } from "@/lib/collection-context";
 
 export function ContactSection() {
+  const { openModal } = useCollectionModal();
+
   return (
     <section id="contact" className="pt-32 pb-48 bg-background">
       <div className="container mx-auto px-4">
@@ -73,7 +78,7 @@ export function ContactSection() {
             <p className="text-muted-foreground mb-6">
               Get exclusive access to new collections and special offers
             </p>
-            <Button size="lg">
+            <Button size="lg" onClick={openModal}>
               Shop Our Latest Collection
               <Sparkles className="ml-2 h-4 w-4" />
             </Button>
