@@ -2,12 +2,16 @@
 
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag } from "lucide-react";
 import { useCollectionModal } from "@/lib/collection-context";
-import { cn } from "@/lib/utils";
 
 interface Product {
   id: number;
@@ -158,7 +162,9 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <Card className="group hover:shadow-xl transition-shadow duration-300 h-full">
       <CardContent className="p-0 h-full flex flex-col">
-        <div className={`aspect-[16/9] bg-gradient-to-br ${product.gradientFrom} ${product.gradientTo} relative overflow-hidden`}>
+        <div
+          className={`aspect-[16/9] bg-gradient-to-br ${product.gradientFrom} ${product.gradientTo} relative overflow-hidden`}
+        >
           <div className="absolute inset-0 flex items-center justify-center">
             <p className="text-8xl">{product.emoji}</p>
           </div>
@@ -182,3 +188,4 @@ function ProductCard({ product }: { product: Product }) {
     </Card>
   );
 }
+
