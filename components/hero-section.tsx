@@ -19,7 +19,7 @@ export function HeroSection() {
 
       <div className="relative container mx-auto px-4 pt-24 pb-48 md:pt-32 md:pb-64">
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-secondary/50 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
             <Sparkles className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium">Handcrafted with Love</span>
           </div>
