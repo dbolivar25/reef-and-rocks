@@ -10,6 +10,7 @@ import {
   ArrowRight,
   Sparkles,
   Heart,
+  Menu,
 } from "lucide-react";
 
 export default function Home() {
@@ -56,6 +57,10 @@ export default function Home() {
                 Follow Us
               </Button>
             </div>
+            <Button variant="ghost" size="icon" className="md:hidden">
+              <Menu className="h-5 w-5" />
+              <span className="sr-only">Open menu</span>
+            </Button>
           </div>
         </div>
       </nav>
