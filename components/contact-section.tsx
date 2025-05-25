@@ -43,7 +43,9 @@ export function ContactSection() {
                 </div>
                 <h3 className="font-semibold mb-2">Follow Us</h3>
                 <a
-                  href="https://instagram.com/reef.and.rocks.jewelry"
+                  href="https://www.instagram.com/reef.and.rocks.jewelry/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   @reef.and.rocks.jewelry

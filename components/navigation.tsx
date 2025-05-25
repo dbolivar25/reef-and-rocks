@@ -44,9 +44,16 @@ export function Navigation() {
               variant="outline"
               size="sm"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              asChild
             >
-              <Instagram className="h-4 w-4 mr-2" />
-              Follow Us
+              <a
+                href="https://www.instagram.com/reef.and.rocks.jewelry/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="h-4 w-4 mr-2" />
+                Follow Us
+              </a>
             </Button>
           </div>
           <Button
@@ -95,10 +102,17 @@ export function Navigation() {
                 variant="outline"
                 size="sm"
                 className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                onClick={() => setMobileMenuOpen(false)}
+                asChild
               >
-                <Instagram className="h-4 w-4 mr-2" />
-                Follow Us
+                <a
+                  href="https://www.instagram.com/reef.and.rocks.jewelry/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Instagram className="h-4 w-4 mr-2" />
+                  Follow Us
+                </a>
               </Button>
             </div>
           </div>
