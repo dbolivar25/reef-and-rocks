@@ -25,7 +25,7 @@ export function ContactSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <Card>
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -57,18 +57,6 @@ export function ContactSection() {
                 </a>
               </CardContent>
             </Card>
-
-            <Card>
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Visit Us</h3>
-                <p className="text-sm text-muted-foreground">
-                  Boutique Store
-                </p>
-              </CardContent>
-            </Card>
           </div>
 
           <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl p-8 mt-12 text-center">
@@ -88,3 +76,4 @@ export function ContactSection() {
     </section>
   );
 }
+
