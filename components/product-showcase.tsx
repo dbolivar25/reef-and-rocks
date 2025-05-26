@@ -21,29 +21,29 @@ const products: Product[] = [
     id: 1,
     name: "Ocean Stone Pendants",
     description: "Wire-wrapped beach stones with natural patterns and textures",
-    priceRange: "$45-85",
+    priceRange: "$10-25",
     emoji: "💎",
     gradientFrom: "from-blue-100",
-    gradientTo: "to-blue-200"
+    gradientTo: "to-blue-200",
   },
   {
     id: 2,
-    name: "Shell Drop Earrings",
+    name: "Shell Pendants",
     description: "Delicate shells paired with natural fibers and beads",
-    priceRange: "$35-65",
+    priceRange: "$10-25",
     emoji: "🐚",
     gradientFrom: "from-amber-100",
-    gradientTo: "to-orange-200"
+    gradientTo: "to-orange-200",
   },
   {
     id: 3,
-    name: "Beach Glass Rings",
+    name: "Beachside Bracelets",
     description: "Smooth sea glass wrapped in sterling silver wire",
-    priceRange: "$55-95",
+    priceRange: "$7-10",
     emoji: "🌊",
     gradientFrom: "from-emerald-100",
-    gradientTo: "to-teal-200"
-  }
+    gradientTo: "to-teal-200",
+  },
 ];
 
 export function ProductShowcase() {
@@ -67,23 +67,28 @@ export function ProductShowcase() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {products.map((product) => (
-            <Card key={product.id} className="group hover:shadow-xl transition-shadow duration-300">
+            <Card
+              key={product.id}
+              className="group hover:shadow-xl transition-shadow duration-300"
+            >
               <CardContent className="p-0">
-                <div className={`aspect-square bg-gradient-to-br ${product.gradientFrom} ${product.gradientTo} relative overflow-hidden`}>
+                <div
+                  className={`aspect-square bg-gradient-to-br ${product.gradientFrom} ${product.gradientTo} relative overflow-hidden`}
+                >
                   <div className="absolute inset-0 flex items-center justify-center">
                     <p className="text-6xl">{product.emoji}</p>
                   </div>
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">
-                    {product.name}
-                  </h3>
+                  <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
                   <p className="text-muted-foreground text-sm mb-4">
                     {product.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold">{product.priceRange}</span>
+                    <span className="text-2xl font-bold">
+                      {product.priceRange}
+                    </span>
                     <Button size="sm" variant="outline" onClick={openModal}>
                       <ShoppingBag className="h-4 w-4" />
                     </Button>
@@ -104,3 +109,4 @@ export function ProductShowcase() {
     </section>
   );
 }
+
