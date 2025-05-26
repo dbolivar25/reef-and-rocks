@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, MapPin, Instagram, Sparkles } from "lucide-react";
+import { Mail, Instagram, Sparkles } from "lucide-react";
 import { useCollectionModal } from "@/lib/collection-context";
 
 export function ContactSection() {
@@ -76,4 +76,3 @@ export function ContactSection() {
     </section>
   );
 }
-
