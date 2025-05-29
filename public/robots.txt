@@ -1,9 +1,9 @@
 # Robots.txt for Reef & Rocks Jewelry
-# https://reef-and-rocks.vercel.app
+# https://www.reef-and-rocks.com
 
 User-agent: *
 Allow: /
 Disallow: /api/
 
 # Sitemaps
-Sitemap: https://reef-and-rocks.vercel.app/sitemap.xml
+Sitemap: https://www.reef-and-rocks.com/sitemap.xml

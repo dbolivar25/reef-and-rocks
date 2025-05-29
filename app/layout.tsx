@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://reef-and-rocks.vercel.app"),
+  metadataBase: new URL("https://www.reef-and-rocks.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Reef & Rocks Jewelry | Handcrafted Ocean-Inspired Jewelry",
     description: "Uniquely picked stones & shells transformed into wearable art. Handcrafted jewelry inspired by nature and the ocean's treasures.",
-    url: "https://reef-and-rocks.vercel.app",
+    url: "https://www.reef-and-rocks.com",
     siteName: "Reef & Rocks Jewelry",
     images: [
       {
