@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingBag, ArrowRight } from "lucide-react";
 import { useCollectionModal } from "@/lib/collection-context";
 import { productCategories } from "@/lib/products";
+import { ImageWithSkeleton } from "@/components/ui/image-with-skeleton";
 
 export function ProductShowcase() {
   const { openModal } = useCollectionModal();
@@ -35,10 +35,9 @@ export function ProductShowcase() {
             >
               <CardContent className="p-0">
                 <div className="aspect-square relative overflow-hidden">
-                  <Image
+                  <ImageWithSkeleton
                     src={category.featuredImage}
                     alt={category.name}
-                    fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />

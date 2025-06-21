@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Dialog,
@@ -14,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingBag } from "lucide-react";
 import { useCollectionModal } from "@/lib/collection-context";
 import { products, type Product } from "@/lib/products";
+import { ImageWithSkeleton } from "@/components/ui/image-with-skeleton";
 
 export function CollectionModal() {
   const { isOpen, closeModal } = useCollectionModal();
@@ -71,10 +71,9 @@ function ProductCard({ product }: { product: Product }) {
     <Card className="group hover:shadow-xl transition-shadow duration-300 h-full overflow-hidden">
       <CardContent className="p-0 h-full flex flex-col">
         <div className="aspect-[4/3] relative overflow-hidden">
-          <Image
+          <ImageWithSkeleton
             src={product.image}
             alt={product.name}
-            fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
