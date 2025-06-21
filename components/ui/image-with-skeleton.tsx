@@ -27,10 +27,8 @@ export function ImageWithSkeleton({
   return (
     <>
       {/* Skeleton loader */}
-      {isLoading && (
-        <Skeleton className="absolute inset-0" />
-      )}
-      
+      {isLoading && <Skeleton className="absolute inset-0" />}
+
       {/* Actual image */}
       <Image
         src={src}
@@ -39,7 +37,7 @@ export function ImageWithSkeleton({
         className={cn(
           "transition-opacity duration-300",
           isLoading ? "opacity-0" : "opacity-100",
-          className
+          className,
         )}
         onLoad={() => setIsLoading(false)}
         sizes={sizes}
@@ -48,3 +46,4 @@ export function ImageWithSkeleton({
     </>
   );
 }
+
