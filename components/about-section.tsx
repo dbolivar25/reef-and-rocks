@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 export function AboutSection() {
   return (
@@ -40,9 +41,13 @@ export function AboutSection() {
           </div>
           <div className="relative">
             <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-6xl">🐚</p>
-              </div>
+              <Image
+                src="/underwater-watercolor.png"
+                alt="Underwater watercolor illustration"
+                fill
+                className="object-cover rounded-2xl"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-accent/80 backdrop-blur-sm p-6 rounded-xl shadow-lg">
               <p className="font-semibold">Sustainable & Ethical</p>
