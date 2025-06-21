@@ -1,50 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingBag, ArrowRight } from "lucide-react";
 import { useCollectionModal } from "@/lib/collection-context";
-
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  priceRange: string;
-  emoji: string;
-  gradientFrom: string;
-  gradientTo: string;
-}
-
-const products: Product[] = [
-  {
-    id: 1,
-    name: "Ocean Stone Pendants",
-    description: "Wire-wrapped beach stones with natural patterns and textures",
-    priceRange: "$10-25",
-    emoji: "💎",
-    gradientFrom: "from-blue-100",
-    gradientTo: "to-blue-200",
-  },
-  {
-    id: 2,
-    name: "Shell Pendants",
-    description: "Delicate shells paired with natural fibers and beads",
-    priceRange: "$10-25",
-    emoji: "🐚",
-    gradientFrom: "from-amber-100",
-    gradientTo: "to-orange-200",
-  },
-  {
-    id: 3,
-    name: "Beachside Bracelets",
-    description: "Smooth sea glass wrapped in sterling silver wire",
-    priceRange: "$7-10",
-    emoji: "🌊",
-    gradientFrom: "from-emerald-100",
-    gradientTo: "to-teal-200",
-  },
-];
+import { productCategories } from "@/lib/products";
 
 export function ProductShowcase() {
   const { openModal } = useCollectionModal();
@@ -66,28 +28,30 @@ export function ProductShowcase() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {products.map((product) => (
+          {productCategories.map((category) => (
             <Card
-              key={product.id}
-              className="group hover:shadow-xl transition-shadow duration-300"
+              key={category.id}
+              className="group hover:shadow-xl transition-shadow duration-300 overflow-hidden"
             >
               <CardContent className="p-0">
-                <div
-                  className={`aspect-square bg-gradient-to-br ${product.gradientFrom} ${product.gradientTo} relative overflow-hidden`}
-                >
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-6xl">{product.emoji}</p>
-                  </div>
-                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
+                <div className="aspect-square relative overflow-hidden">
+                  <Image
+                    src={category.featuredImage}
+                    alt={category.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
+                  <h3 className="font-semibold text-lg mb-2">{category.name}</h3>
                   <p className="text-muted-foreground text-sm mb-4">
-                    {product.description}
+                    {category.description}
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold">
-                      {product.priceRange}
+                      {category.priceRange}
                     </span>
                     <Button size="sm" variant="outline" onClick={openModal}>
                       <ShoppingBag className="h-4 w-4" />

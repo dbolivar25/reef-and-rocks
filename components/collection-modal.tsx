@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Dialog,
@@ -12,100 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag } from "lucide-react";
 import { useCollectionModal } from "@/lib/collection-context";
-
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: string;
-  emoji: string;
-  gradientFrom: string;
-  gradientTo: string;
-}
-
-const products: Product[] = [
-  {
-    id: 1,
-    name: "Ocean Stone Pendant",
-    description: "Wire-wrapped beach stone",
-    price: "$65",
-    emoji: "💎",
-    gradientFrom: "from-blue-50",
-    gradientTo: "to-blue-100",
-  },
-  {
-    id: 2,
-    name: "Shell Drop Earrings",
-    description: "Delicate shells with silver",
-    price: "$45",
-    emoji: "🐚",
-    gradientFrom: "from-amber-50",
-    gradientTo: "to-orange-100",
-  },
-  {
-    id: 3,
-    name: "Sea Glass Ring",
-    description: "Smooth sea glass wrapped",
-    price: "$75",
-    emoji: "🌊",
-    gradientFrom: "from-emerald-50",
-    gradientTo: "to-teal-100",
-  },
-  {
-    id: 4,
-    name: "Pearl & Coral Bracelet",
-    description: "Natural pearls with coral",
-    price: "$95",
-    emoji: "🦪",
-    gradientFrom: "from-pink-50",
-    gradientTo: "to-rose-100",
-  },
-  {
-    id: 5,
-    name: "Starfish Pendant",
-    description: "Preserved in clear resin",
-    price: "$55",
-    emoji: "⭐",
-    gradientFrom: "from-yellow-50",
-    gradientTo: "to-amber-100",
-  },
-  {
-    id: 6,
-    name: "Abalone Shell Earrings",
-    description: "Iridescent with gold",
-    price: "$85",
-    emoji: "🌈",
-    gradientFrom: "from-purple-50",
-    gradientTo: "to-pink-100",
-  },
-  {
-    id: 7,
-    name: "Moonstone Ring",
-    description: "Beach-found moonstone",
-    price: "$95",
-    emoji: "🌙",
-    gradientFrom: "from-slate-50",
-    gradientTo: "to-gray-100",
-  },
-  {
-    id: 8,
-    name: "Driftwood Bracelet",
-    description: "Smooth driftwood beads",
-    price: "$65",
-    emoji: "🪵",
-    gradientFrom: "from-stone-50",
-    gradientTo: "to-zinc-100",
-  },
-  {
-    id: 9,
-    name: "Sand Dollar Pendant",
-    description: "Preserved sand dollar",
-    price: "$55",
-    emoji: "🏖️",
-    gradientFrom: "from-yellow-50",
-    gradientTo: "to-orange-100",
-  },
-];
+import { products, type Product } from "@/lib/products";
 
 export function CollectionModal() {
   const { isOpen, closeModal } = useCollectionModal();
@@ -160,18 +68,20 @@ export function CollectionModal() {
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <Card className="group hover:shadow-xl transition-shadow duration-300 h-full">
+    <Card className="group hover:shadow-xl transition-shadow duration-300 h-full overflow-hidden">
       <CardContent className="p-0 h-full flex flex-col">
-        <div
-          className={`aspect-[16/9] bg-gradient-to-br ${product.gradientFrom} ${product.gradientTo} relative overflow-hidden`}
-        >
-          <div className="absolute inset-0 flex items-center justify-center">
-            <p className="text-8xl">{product.emoji}</p>
-          </div>
-          <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
+        <div className="aspect-[4/3] relative overflow-hidden">
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
         <div className="p-6 flex-1 flex flex-col">
-          <h3 className="font-semibold text-lg mb-2 truncate">
+          <h3 className="font-semibold text-lg mb-2">
             {product.name}
           </h3>
           <p className="text-muted-foreground text-sm mb-4">
