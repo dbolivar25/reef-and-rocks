@@ -68,8 +68,12 @@ export function CollectionModal() {
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <Card className="group hover:shadow-xl transition-shadow duration-300 h-full overflow-hidden">
-      <CardContent className="p-0 h-full flex flex-col">
+    <Card className="group hover:shadow-xl transition-shadow duration-300 h-full overflow-hidden relative">
+      {/* Gradient overlay at the top */}
+      <div
+        className={`absolute inset-x-0 top-0 h-[5%] bg-gradient-to-b ${product.gradientFrom} to-transparent opacity-100`}
+      />
+      <CardContent className="p-0 h-full flex flex-col relative">
         <div className="aspect-[4/3] relative overflow-hidden">
           <ImageWithSkeleton
             src={product.image}
@@ -80,9 +84,7 @@ function ProductCard({ product }: { product: Product }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
         <div className="p-6 flex-1 flex flex-col">
-          <h3 className="font-semibold text-lg mb-2">
-            {product.name}
-          </h3>
+          <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
           <p className="text-muted-foreground text-sm mb-4">
             {product.description}
           </p>
@@ -97,4 +99,3 @@ function ProductCard({ product }: { product: Product }) {
     </Card>
   );
 }
-

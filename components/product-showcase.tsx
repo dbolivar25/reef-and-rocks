@@ -31,9 +31,13 @@ export function ProductShowcase() {
           {productCategories.map((category) => (
             <Card
               key={category.id}
-              className="group hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+              className="group hover:shadow-xl transition-shadow duration-300 overflow-hidden relative"
             >
-              <CardContent className="p-0">
+              {/* Gradient overlay at the top */}
+              <div
+                className={`absolute inset-x-0 top-0 h-[5%] bg-gradient-to-b ${category.gradientFrom} to-transparent opacity-100`}
+              />
+              <CardContent className="p-0 relative">
                 <div className="aspect-square relative overflow-hidden">
                   <ImageWithSkeleton
                     src={category.featuredImage}
@@ -44,7 +48,9 @@ export function ProductShowcase() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">{category.name}</h3>
+                  <h3 className="font-semibold text-lg mb-2">
+                    {category.name}
+                  </h3>
                   <p className="text-muted-foreground text-sm mb-4">
                     {category.description}
                   </p>
@@ -72,4 +78,3 @@ export function ProductShowcase() {
     </section>
   );
 }
-
