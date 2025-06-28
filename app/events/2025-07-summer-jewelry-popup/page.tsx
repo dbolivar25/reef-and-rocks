@@ -36,10 +36,10 @@ export default function PopupEvent() {
               {/* Date & Time Block */}
               <div className="text-center space-y-2">
                 <p className="text-3xl md:text-4xl font-bold text-primary">
-                  Saturday, July 12
+                  Friday, July 11
                 </p>
                 <p className="text-xl md:text-2xl text-muted-foreground">
-                  10 AM - 3 PM
+                  4:00 PM - 7:00 PM
                 </p>
               </div>
 
@@ -56,9 +56,10 @@ export default function PopupEvent() {
                   Reef & Rocks Jewelry Boutique
                 </h2>
                 <p className="text-muted-foreground leading-relaxed max-w-md mx-auto">
-                  Join 14-year-old artisan Sarah Bolivar for an exclusive showcase 
-                  of handcrafted jewelry. Each piece is lovingly created using 
-                  hand-picked stones and shells, transformed into unique wearable art.
+                  Join 14-year-old artisan Sarah Bolivar for an exclusive
+                  showcase of handcrafted jewelry. Each piece is lovingly
+                  created using hand-picked stones and shells, transformed into
+                  unique wearable art.
                 </p>
               </div>
 
@@ -66,10 +67,13 @@ export default function PopupEvent() {
               <div className="bg-muted/50 rounded-2xl p-6 text-center">
                 <div className="flex items-center justify-center gap-2 text-muted-foreground mb-2">
                   <MapPin className="h-4 w-4" />
-                  <span className="text-sm uppercase tracking-wide">Location</span>
+                  <span className="text-sm uppercase tracking-wide">
+                    Location
+                  </span>
                 </div>
                 <p className="font-medium text-lg">
-                  1440 Falkirk Ln<br />
+                  1440 Falkirk Ln
+                  <br />
                   Kennesaw, GA 30152
                 </p>
               </div>
@@ -137,3 +141,4 @@ export default function PopupEvent() {
     </div>
   );
 }
+
