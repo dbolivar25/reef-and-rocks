@@ -14,6 +14,7 @@ import { ShoppingBag } from "lucide-react";
 import { useCollectionModal } from "@/lib/collection-context";
 import { products, type Product } from "@/lib/products";
 import { ImageWithSkeleton } from "@/components/ui/image-with-skeleton";
+import { generateProductInquiryEmail } from "@/lib/mailto-utils";
 
 export function CollectionModal() {
   const { isOpen, closeModal } = useCollectionModal();
@@ -67,6 +68,11 @@ export function CollectionModal() {
 }
 
 function ProductCard({ product }: { product: Product }) {
+  const handleInquiry = () => {
+    const mailtoUrl = generateProductInquiryEmail(product);
+    window.location.href = mailtoUrl;
+  };
+
   return (
     <Card className="group hover:shadow-xl transition-shadow duration-300 h-full overflow-hidden relative">
       {/* Gradient overlay at the top */}
@@ -90,7 +96,12 @@ function ProductCard({ product }: { product: Product }) {
           </p>
           <div className="flex items-center justify-between mt-auto">
             <span className="text-2xl font-bold">{product.price}</span>
-            <Button size="sm" variant="outline">
+            <Button 
+              size="sm" 
+              variant="outline" 
+              onClick={handleInquiry}
+              aria-label={`Inquire about ${product.name}`}
+            >
               <ShoppingBag className="h-4 w-4" />
             </Button>
           </div>

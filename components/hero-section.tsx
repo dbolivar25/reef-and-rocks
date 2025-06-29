@@ -4,9 +4,15 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Heart } from "lucide-react";
 import Image from "next/image";
 import { useCollectionModal } from "@/lib/collection-context";
+import { generateCustomOrderEmail } from "@/lib/mailto-utils";
 
 export function HeroSection() {
   const { openModal } = useCollectionModal();
+
+  const handleCustomOrder = () => {
+    const mailtoUrl = generateCustomOrderEmail();
+    window.location.href = mailtoUrl;
+  };
 
   return (
     <section className="relative overflow-hidden">
@@ -40,7 +46,12 @@ export function HeroSection() {
               Shop Our Collection
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline">
+            <Button 
+              size="lg" 
+              variant="outline"
+              onClick={handleCustomOrder}
+              aria-label="Request a custom jewelry order"
+            >
               <Heart className="mr-2 h-4 w-4" />
               Custom Orders
             </Button>
