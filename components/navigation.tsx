@@ -9,7 +9,7 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b">
+    <nav className={`sticky top-0 z-50 bg-background/80 backdrop-blur-md ${!mobileMenuOpen ? 'border-b' : ''}`}>
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -76,8 +76,8 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-b">
+        <div className="md:hidden border-b">
+          <div className="px-2 pt-2 pb-3 space-y-1">
             <a
               href="#about"
               className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"

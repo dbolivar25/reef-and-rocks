@@ -5,7 +5,7 @@ export function AboutSection() {
   return (
     <section id="about" className="py-32 bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center pr-6 pb-6 md:pr-0 md:pb-0">
           <div>
             <Badge variant="outline" className="mb-4">
               Our Story
