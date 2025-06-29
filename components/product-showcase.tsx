@@ -58,7 +58,22 @@ export function ProductShowcase() {
                     <span className="text-2xl font-bold">
                       {category.priceRange}
                     </span>
-                    <Button size="sm" variant="outline" onClick={openModal}>
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      onClick={() => {
+                        // Map category names to filter values
+                        if (category.name.includes("Shell") || category.name.includes("Pearl")) {
+                          openModal('shell-pearl');
+                        } else if (category.name.includes("Stone") || category.name.includes("Crystal")) {
+                          openModal('stone-crystal');
+                        } else if (category.name.includes("Bracelet") || category.name.includes("Bangle")) {
+                          openModal('bracelet-bangle');
+                        } else {
+                          openModal('all');
+                        }
+                      }}
+                    >
                       <ShoppingBag className="h-4 w-4" />
                     </Button>
                   </div>
@@ -69,7 +84,7 @@ export function ProductShowcase() {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" onClick={openModal}>
+          <Button size="lg" variant="outline" onClick={() => openModal('all')}>
             View Full Collection
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

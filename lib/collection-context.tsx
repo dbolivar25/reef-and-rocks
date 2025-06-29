@@ -2,10 +2,14 @@
 
 import React, { createContext, useContext, useState } from "react";
 
+export type CategoryFilter = 'all' | 'shell-pearl' | 'stone-crystal' | 'bracelet-bangle';
+
 interface CollectionContextType {
   isOpen: boolean;
-  openModal: () => void;
+  selectedCategory: CategoryFilter;
+  openModal: (category?: CategoryFilter) => void;
   closeModal: () => void;
+  setCategory: (category: CategoryFilter) => void;
 }
 
 const CollectionContext = createContext<CollectionContextType | undefined>(
@@ -18,12 +22,23 @@ export function CollectionProvider({
   children: React.ReactNode;
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>('all');
 
-  const openModal = () => setIsOpen(true);
+  const openModal = (category: CategoryFilter = 'all') => {
+    setSelectedCategory(category);
+    setIsOpen(true);
+  };
+  
   const closeModal = () => setIsOpen(false);
+  
+  const setCategory = (category: CategoryFilter) => {
+    setSelectedCategory(category);
+  };
 
   return (
-    <CollectionContext.Provider value={{ isOpen, openModal, closeModal }}>
+    <CollectionContext.Provider 
+      value={{ isOpen, selectedCategory, openModal, closeModal, setCategory }}
+    >
       {children}
     </CollectionContext.Provider>
   );

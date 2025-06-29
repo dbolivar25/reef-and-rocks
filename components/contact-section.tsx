@@ -66,7 +66,7 @@ export function ContactSection() {
             <p className="text-muted-foreground mb-6">
               Get exclusive access to new collections and special offers
             </p>
-            <Button size="lg" onClick={openModal}>
+            <Button size="lg" onClick={() => openModal('all')}>
               Shop Our Latest Collection
               <Sparkles className="ml-2 h-4 w-4" />
             </Button>
