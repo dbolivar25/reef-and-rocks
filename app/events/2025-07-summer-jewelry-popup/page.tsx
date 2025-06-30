@@ -98,7 +98,7 @@ export default function PopupEvent() {
               <div className="grid grid-cols-3 gap-2 pt-4">
                 <div className="aspect-square relative overflow-hidden rounded-lg">
                   <Image
-                    src="/product-images/natural-scallop-shell-pendant-white-cord-8c4d2.jpeg"
+                    src="https://2cx1pnlrdg.ufs.sh/f/7vK76TbaYFmZPEY5X6pDvVSOmxB6sqMXZy9UHnGlEALeTN71"
                     alt="Shell pendant"
                     fill
                     className="object-cover"
@@ -106,7 +106,7 @@ export default function PopupEvent() {
                 </div>
                 <div className="aspect-square relative overflow-hidden rounded-lg">
                   <Image
-                    src="/product-images/wire-wrapped-pearl-pendant-necklace-3e7c4.jpeg"
+                    src="https://2cx1pnlrdg.ufs.sh/f/7vK76TbaYFmZSWzUHRfPtRwNKC9JpFgvrMe8H6xzhZ4Oails"
                     alt="Pearl pendant"
                     fill
                     className="object-cover"
@@ -114,7 +114,7 @@ export default function PopupEvent() {
                 </div>
                 <div className="aspect-square relative overflow-hidden rounded-lg">
                   <Image
-                    src="/product-images/leather-bracelet-turquoise-beads-copper-7c3e1.jpeg"
+                    src="https://2cx1pnlrdg.ufs.sh/f/7vK76TbaYFmZJB2HCKwRXMfwN0pbGZdLIEPUhcqDiQsvjylg"
                     alt="Turquoise bracelet"
                     fill
                     className="object-cover"
