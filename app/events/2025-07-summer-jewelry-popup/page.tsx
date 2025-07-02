@@ -36,10 +36,10 @@ export default function PopupEvent() {
               {/* Date & Time Block */}
               <div className="text-center space-y-2">
                 <p className="text-3xl md:text-4xl font-bold text-primary">
-                  Friday, July 11
+                  Wednesday, July 9
                 </p>
                 <p className="text-xl md:text-2xl text-muted-foreground">
-                  4:00 PM - 7:00 PM
+                  4:30 PM - 7:00 PM
                 </p>
               </div>
 
@@ -141,4 +141,3 @@ export default function PopupEvent() {
     </div>
   );
 }
-
