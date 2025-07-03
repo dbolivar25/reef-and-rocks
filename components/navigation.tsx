@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Instagram, Menu, X } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ export function Navigation() {
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <a href="/#" className="block">
+            <Link href="/#" className="block">
               <Image
                 src="/reef-and-rocks-logo.png"
                 alt="Reef and Rocks"
@@ -23,41 +24,41 @@ export function Navigation() {
                 height={90}
                 className="h-16 md:h-18 w-auto hover:drop-shadow-[0_0_8px_rgba(8,145,178,0.1)] transition-all"
               />
-            </a>
+            </Link>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <a
+            <Link
               href="/#about"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#collection"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               Collection
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#contact"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               Contact
-            </a>
+            </Link>
             <Button
               variant="outline"
               size="sm"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               asChild
             >
-              <a
+              <Link
                 href="https://www.instagram.com/reef.and.rocks.jewelry/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Instagram className="h-4 w-4 mr-2" />
                 Follow Us
-              </a>
+              </Link>
             </Button>
           </div>
           <Button
@@ -80,27 +81,27 @@ export function Navigation() {
       {mobileMenuOpen && (
         <div className="md:hidden border-b">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <a
+            <Link
               href="/#about"
               className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#collection"
               className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Collection
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#contact"
               className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
-            </a>
+            </Link>
             <div className="px-3 py-2">
               <Button
                 variant="outline"
@@ -108,7 +109,7 @@ export function Navigation() {
                 className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 asChild
               >
-                <a
+                <Link
                   href="https://www.instagram.com/reef.and.rocks.jewelry/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -116,7 +117,7 @@ export function Navigation() {
                 >
                   <Instagram className="h-4 w-4 mr-2" />
                   Follow Us
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
@@ -125,4 +126,3 @@ export function Navigation() {
     </nav>
   );
 }
-
