@@ -16,8 +16,8 @@ export default function PopupEvent() {
       </div>
 
       {/* Main Content */}
-      <div className="relative flex items-center justify-center min-h-screen p-4">
-        <div className="max-w-2xl w-full mx-auto py-16">
+      <div className="relative flex items-center justify-center min-h-screen px-8">
+        <div className="max-w-2xl w-full mx-auto py-10">
           {/* Event Poster Style Layout */}
           <div className="bg-card/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden">
             {/* Header with gradient */}

@@ -9,11 +9,13 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className={`sticky top-0 z-50 bg-background/80 backdrop-blur-md ${!mobileMenuOpen ? 'border-b' : ''}`}>
+    <nav
+      className={`sticky top-0 z-50 bg-background/80 backdrop-blur-md ${!mobileMenuOpen ? "border-b" : ""}`}
+    >
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <a href="#" className="block">
+            <a href="/#" className="block">
               <Image
                 src="/reef-and-rocks-logo.png"
                 alt="Reef and Rocks"
@@ -25,19 +27,19 @@ export function Navigation() {
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a
-              href="#about"
+              href="/#about"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               About
             </a>
             <a
-              href="#collection"
+              href="/#collection"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               Collection
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               Contact
@@ -79,21 +81,21 @@ export function Navigation() {
         <div className="md:hidden border-b">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a
-              href="#about"
+              href="/#about"
               className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </a>
             <a
-              href="#collection"
+              href="/#collection"
               className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Collection
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="block px-3 py-2 text-base font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -123,3 +125,4 @@ export function Navigation() {
     </nav>
   );
 }
+

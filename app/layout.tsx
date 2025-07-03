@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { CollectionProvider } from "@/lib/collection-context";
 import { CollectionModal } from "@/components/collection-modal";
 import "./globals.css";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +18,20 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Reef & Rocks Jewelry | Handcrafted Ocean-Inspired Jewelry",
-  description: "Uniquely picked stones & shells transformed into wearable art. Handcrafted jewelry inspired by nature and the ocean's treasures.",
-  keywords: ["handmade jewelry", "ocean jewelry", "beach jewelry", "natural stone jewelry", "shell jewelry", "wire wrapped jewelry", "artisan jewelry", "sustainable jewelry", "custom jewelry", "reef and rocks"],
+  description:
+    "Uniquely picked stones & shells transformed into wearable art. Handcrafted jewelry inspired by nature and the ocean's treasures.",
+  keywords: [
+    "handmade jewelry",
+    "ocean jewelry",
+    "beach jewelry",
+    "natural stone jewelry",
+    "shell jewelry",
+    "wire wrapped jewelry",
+    "artisan jewelry",
+    "sustainable jewelry",
+    "custom jewelry",
+    "reef and rocks",
+  ],
   authors: [{ name: "Reef & Rocks Jewelry" }],
   creator: "Reef & Rocks Jewelry",
   publisher: "Reef & Rocks Jewelry",
@@ -32,7 +46,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Reef & Rocks Jewelry | Handcrafted Ocean-Inspired Jewelry",
-    description: "Uniquely picked stones & shells transformed into wearable art. Handcrafted jewelry inspired by nature and the ocean's treasures.",
+    description:
+      "Uniquely picked stones & shells transformed into wearable art. Handcrafted jewelry inspired by nature and the ocean's treasures.",
     url: "https://www.reef-and-rocks.com",
     siteName: "Reef & Rocks Jewelry",
     images: [
@@ -49,7 +64,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Reef & Rocks Jewelry | Handcrafted Ocean-Inspired Jewelry",
-    description: "Uniquely picked stones & shells transformed into wearable art. Each piece tells a story of the ocean's treasures.",
+    description:
+      "Uniquely picked stones & shells transformed into wearable art. Each piece tells a story of the ocean's treasures.",
     images: ["/og-image.png"],
     creator: "@reefandrocks",
   },
@@ -109,7 +125,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CollectionProvider>
+          <Navigation />
           {children}
+          <Footer />
           <CollectionModal />
         </CollectionProvider>
       </body>
