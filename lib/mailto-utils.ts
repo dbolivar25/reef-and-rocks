@@ -3,7 +3,7 @@ import { Product } from "./products";
 export function generateMailtoUrl(
   subject: string,
   body: string,
-  email: string = "reefandrockjewelry@gmail.com"
+  email: string = "reefandrocksjewelry@gmail.com",
 ): string {
   const encodedSubject = encodeURIComponent(subject);
   const encodedBody = encodeURIComponent(body);
@@ -50,3 +50,4 @@ Thank you!`;
 
   return generateMailtoUrl(subject, body);
 }
+
