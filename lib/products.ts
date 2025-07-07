@@ -158,17 +158,6 @@ export const products: Product[] = [
     gradientTo: "to-orange-100",
   },
   {
-    id: 13,
-    name: "Amethyst Crystal Necklace",
-    description: "Purple amethyst stone with gold wire",
-    price: "$20",
-    category: "stone-crystal",
-    image: "https://2cx1pnlrdg.ufs.sh/f/7vK76TbaYFmZLrV7DT4kVm2AfGcZ1DC4auO8dRNb6tpxHhjY",
-    emoji: "💜",
-    gradientFrom: "from-purple-50",
-    gradientTo: "to-violet-100",
-  },
-  {
     id: 14,
     name: "Black Obsidian Pendant",
     description: "Polished obsidian on leather cord",
@@ -200,17 +189,6 @@ export const products: Product[] = [
     emoji: "🖤",
     gradientFrom: "from-zinc-50",
     gradientTo: "to-gray-100",
-  },
-  {
-    id: 17,
-    name: "Pink Stone White Cord Necklace",
-    description: "Soft pink stone with gold wire wrap",
-    price: "$20",
-    category: "stone-crystal",
-    image: "https://2cx1pnlrdg.ufs.sh/f/7vK76TbaYFmZPSPC3ApDvVSOmxB6sqMXZy9UHnGlEALeTN71",
-    emoji: "💗",
-    gradientFrom: "from-pink-50",
-    gradientTo: "to-fuchsia-100",
   },
   {
     id: 18,
@@ -290,17 +268,6 @@ export const products: Product[] = [
     emoji: "🌟",
     gradientFrom: "from-yellow-50",
     gradientTo: "to-amber-100",
-  },
-  {
-    id: 25,
-    name: "Red Spotted Shell Pendant",
-    description: "Unique spotted shell with gold cross wire",
-    price: "$20",
-    category: "shell-pearl",
-    image: "https://2cx1pnlrdg.ufs.sh/f/7vK76TbaYFmZHxkDwkB0POU7jm5uqadyfAg9DXMGEQhcv8Yt",
-    emoji: "🔴",
-    gradientFrom: "from-red-50",
-    gradientTo: "to-pink-100",
   },
   {
     id: 26,
@@ -493,7 +460,7 @@ export const productCategories: ProductCategory[] = [
     emoji: "💎",
     gradientFrom: "from-purple-50",
     gradientTo: "to-pink-100",
-    featuredImage: "https://2cx1pnlrdg.ufs.sh/f/7vK76TbaYFmZLrV7DT4kVm2AfGcZ1DC4auO8dRNb6tpxHhjY",
+    featuredImage: "https://2cx1pnlrdg.ufs.sh/f/7vK76TbaYFmZmItEWgZGkSrGXVn6TMKpoaih07JE2fyIb5lB",
   },
   {
     id: 3,
@@ -517,11 +484,11 @@ export function getFeaturedProducts(limit: number = 6) {
   // Return a selection of diverse products
   const featured = [
     products[0],  // Natural Scallop Shell
-    products[12], // Amethyst Crystal (was 14, now 13)
-    products[35], // Turquoise Bracelet (was 38, now 36)
+    products[10], // Lapis Lazuli Gold Wire Necklace
+    products[32], // Turquoise Bracelet
     products[5],  // Orange Conch Shell
-    products[14], // Rose Quartz Triangle (was 16, now 15)
-    products[39], // Gold Bangle (was 42, now 40)
+    products[12], // Rose Quartz Triangle
+    products[36], // Gold Bangle
   ];
   return featured.slice(0, limit);
 }
