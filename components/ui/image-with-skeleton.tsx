@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ImageOff } from "lucide-react";
 
 interface ImageWithSkeletonProps {
   src: string;
@@ -23,13 +24,21 @@ export function ImageWithSkeleton({
   priority = false,
 }: ImageWithSkeletonProps) {
   const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+
+  if (hasError) {
+    return (
+      <div className="absolute inset-0 bg-muted flex flex-col items-center justify-center gap-2">
+        <ImageOff className="size-8 text-muted-foreground" />
+        <span className="text-sm text-muted-foreground">Image unavailable</span>
+      </div>
+    );
+  }
 
   return (
     <>
-      {/* Skeleton loader */}
       {isLoading && <Skeleton className="absolute inset-0" />}
 
-      {/* Actual image */}
       <Image
         src={src}
         alt={alt}
@@ -37,13 +46,16 @@ export function ImageWithSkeleton({
         className={cn(
           "transition-opacity duration-300",
           isLoading ? "opacity-0" : "opacity-100",
-          className,
+          className
         )}
         onLoad={() => setIsLoading(false)}
+        onError={() => {
+          setIsLoading(false);
+          setHasError(true);
+        }}
         sizes={sizes}
         priority={priority}
       />
     </>
   );
 }
-

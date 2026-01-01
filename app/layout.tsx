@@ -114,6 +114,37 @@ export const viewport: Viewport = {
   ],
 };
 
+// JSON-LD structured data for SEO rich snippets
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Reef & Rocks Jewelry",
+  url: "https://www.reef-and-rocks.com",
+  logo: "https://www.reef-and-rocks.com/reef-and-rocks-logo.png",
+  description:
+    "Handcrafted ocean-inspired jewelry. Uniquely picked stones & shells transformed into wearable art.",
+  sameAs: ["https://www.instagram.com/reef.and.rocks.jewelry/"],
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "reefandrockjewelry@gmail.com",
+    contactType: "customer service",
+  },
+  founder: {
+    "@type": "Person",
+    name: "Sarah Bolivar",
+    description: "14-year-old artisan jewelry maker",
+  },
+  makesOffer: {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Product",
+      name: "Handcrafted Ocean-Inspired Jewelry",
+      description: "Wire-wrapped shells, stones, pearls, and natural materials",
+    },
+    priceRange: "$7-$20",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -121,6 +152,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

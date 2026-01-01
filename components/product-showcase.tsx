@@ -2,11 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { ShoppingBag, ArrowRight } from "lucide-react";
 import { useCollectionModal } from "@/lib/collection-context";
 import { productCategories } from "@/lib/products";
 import { ImageWithSkeleton } from "@/components/ui/image-with-skeleton";
+import { SectionHeader } from "@/components/section-header";
 
 export function ProductShowcase() {
   const { openModal } = useCollectionModal();
@@ -14,18 +14,11 @@ export function ProductShowcase() {
   return (
     <section id="collection" className="py-32 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <Badge variant="outline" className="mb-4">
-            Featured Collection
-          </Badge>
-          <h2 className="text-4xl font-bold mb-4">
-            Nature&apos;s Finest Treasures
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Each piece is one-of-a-kind, just like the natural elements that
-            inspire them
-          </p>
-        </div>
+        <SectionHeader
+          badge="Featured Collection"
+          title="Nature's Finest Treasures"
+          description="Each piece is one-of-a-kind, just like the natural elements that inspire them"
+        />
 
         <div className="grid md:grid-cols-3 gap-8">
           {productCategories.map((category) => (
@@ -33,7 +26,6 @@ export function ProductShowcase() {
               key={category.id}
               className="group hover:shadow-xl transition-shadow duration-300 overflow-hidden relative"
             >
-              {/* Gradient overlay at the top */}
               <div
                 className={`absolute inset-x-0 top-0 h-[5%] bg-gradient-to-b ${category.gradientFrom} to-transparent opacity-100`}
               />
@@ -58,19 +50,27 @@ export function ProductShowcase() {
                     <span className="text-2xl font-bold">
                       {category.priceRange}
                     </span>
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
+                    <Button
+                      size="sm"
+                      variant="outline"
                       onClick={() => {
-                        // Map category names to filter values
-                        if (category.name.includes("Shell") || category.name.includes("Pearl")) {
-                          openModal('shell-pearl');
-                        } else if (category.name.includes("Stone") || category.name.includes("Crystal")) {
-                          openModal('stone-crystal');
-                        } else if (category.name.includes("Bracelet") || category.name.includes("Bangle")) {
-                          openModal('bracelet-bangle');
+                        if (
+                          category.name.includes("Shell") ||
+                          category.name.includes("Pearl")
+                        ) {
+                          openModal("shell-pearl");
+                        } else if (
+                          category.name.includes("Stone") ||
+                          category.name.includes("Crystal")
+                        ) {
+                          openModal("stone-crystal");
+                        } else if (
+                          category.name.includes("Bracelet") ||
+                          category.name.includes("Bangle")
+                        ) {
+                          openModal("bracelet-bangle");
                         } else {
-                          openModal('all');
+                          openModal("all");
                         }
                       }}
                     >
@@ -84,7 +84,7 @@ export function ProductShowcase() {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" onClick={() => openModal('all')}>
+          <Button size="lg" variant="outline" onClick={() => openModal("all")}>
             View Full Collection
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

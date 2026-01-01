@@ -2,9 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Mail, Instagram, Sparkles } from "lucide-react";
 import { useCollectionModal } from "@/lib/collection-context";
+import { SectionHeader } from "@/components/section-header";
 
 export function ContactSection() {
   const { openModal } = useCollectionModal();
@@ -13,17 +13,11 @@ export function ContactSection() {
     <section id="contact" className="pt-32 pb-48 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <Badge variant="outline" className="mb-4">
-              Get in Touch
-            </Badge>
-            <h2 className="text-4xl font-bold mb-4">
-              Let&apos;s Create Something Beautiful
-            </h2>
-            <p className="text-muted-foreground">
-              Have a custom request or want to know more about our collection?
-            </p>
-          </div>
+          <SectionHeader
+            badge="Get in Touch"
+            title="Let's Create Something Beautiful"
+            description="Have a custom request or want to know more about our collection?"
+          />
 
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
@@ -66,7 +60,7 @@ export function ContactSection() {
             <p className="text-muted-foreground mb-6">
               Get exclusive access to new collections and special offers
             </p>
-            <Button size="lg" onClick={() => openModal('all')}>
+            <Button size="lg" onClick={() => openModal("all")}>
               Shop Our Latest Collection
               <Sparkles className="ml-2 h-4 w-4" />
             </Button>

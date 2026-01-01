@@ -42,7 +42,7 @@ export function AboutSection() {
           <div className="relative">
             <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden">
               <Image
-                src="/underwater-watercolor.png"
+                src="/underwater-watercolor.webp"
                 alt="Underwater watercolor illustration"
                 fill
                 className="object-cover rounded-2xl"

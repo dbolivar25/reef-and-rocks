@@ -8,8 +8,9 @@ export default function PopupEvent() {
       {/* Background texture */}
       <div className="fixed inset-0 opacity-10">
         <Image
-          src="/underwater-watercolor.png"
+          src="/underwater-watercolor.webp"
           alt=""
+          aria-hidden="true"
           fill
           className="object-cover"
         />

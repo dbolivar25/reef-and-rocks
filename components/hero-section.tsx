@@ -19,8 +19,9 @@ export function HeroSection() {
       {/* Custom watercolor background */}
       <div className="absolute inset-0">
         <Image
-          src="/hero-watercolor.png"
+          src="/hero-watercolor.webp"
           alt=""
+          aria-hidden="true"
           fill
           className="object-cover object-center"
           priority
